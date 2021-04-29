@@ -11,6 +11,10 @@ Pkg.add("SimpleCrop")
 
 ## Getting Started
 
+```@setup simple
+ENV["UNITFUL_FANCY_EXPONENTS"] = true
+```
+
 ```@example simple
 using Cropbox
 using SimpleCrop
