@@ -57,7 +57,7 @@ The output of simulation is now contained in a data frame from which we generate
 visualize(r, :DATE, :N; ylim = (0, 15), kind = :line)
 ```
 
-Thermal degree days (`INT`) started accumulating from mid-August with the onset of reproductive stage until late-October when it reaches the maturity indicated by `duration_of_reproductive_stage`.
+Thermal degree days (`INT`) started accumulating from mid-August with the onset of reproductive stage until late-October when it reaches the maturity indicated by `duration_of_reproductive_stage` (= 300 K d).
 
 ```@example simple
 visualize(r, :DATE, :INT; kind = :line)
