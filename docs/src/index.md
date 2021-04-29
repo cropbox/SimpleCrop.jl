@@ -51,7 +51,7 @@ r = simulate(SimpleCrop.Model; config, stop = :endsim)
 ; # hide
 ```
 
-The output of simulation is now contained in a data frame from which we generate multiple plots. The number of leaf (`N`) went from `initial_leaf_number` (= 0) to `maximum_leaf_number` (= 12) as indicated in the default set of parameters.
+The output of simulation is now contained in a data frame from which we generate multiple plots. The number of leaf (`N`) went from `initial_leaf_number` (= 2) to `maximum_leaf_number` (= 12) as indicated in the default set of parameters.
 
 ```@example simple
 visualize(r, :DATE, :N; ylim = (0, 15), kind = :line)
