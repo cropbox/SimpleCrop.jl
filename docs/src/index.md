@@ -66,7 +66,8 @@ visualize(r, :DATE, :INT; kind = :line)
 Assimilated carbon (`W`) was partitioned into multiple parts of the plant as shown in the plot of dry biomass.
 
 ```@example simple
-visualize(r, :DATE, [:W, :Wc, :Wr, :Wf]; names = ["Total", "Canopy", "Root", "Fruit"], kind = :line)
+visualize(r, :DATE, [:W, :Wc, :Wr, :Wf];
+    names = ["Total", "Canopy", "Root", "Fruit"], kind = :line)
 ```
 
 Leaf area index (`LAI`) reached its peak at the end of vegetative stage then began declining throughout reproductive stage.
