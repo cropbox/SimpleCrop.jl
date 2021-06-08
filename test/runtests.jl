@@ -4,7 +4,6 @@ using Test
 
 using CSV
 using DataFrames
-using Dates
 using TimeZones
 
 loaddata(f) = CSV.File(joinpath(@__DIR__, "data", f)) |> DataFrame
