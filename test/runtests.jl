@@ -26,26 +26,26 @@ r = simulate(SimpleCrop.Model;
 
 @testset "simplecrop" begin
     @testset "plant" begin
-        visualize(r, :DATE, :N; kind = :line) |> display
-        visualize(r, :DATE, :INT; kind = :line) |> display
-        visualize(r, :DATE, :W; kind = :line) |> display
-        visualize(r, :DATE, :Wc; kind = :line) |> display
-        visualize(r, :DATE, :Wr; kind = :line) |> display
-        visualize(r, :DATE, :Wf; kind = :line) |> display
-        visualize(r, :DATE, :LAI; kind = :line) |> display
+        visualize(r, :DATE, :N; kind = :line) |> println
+        visualize(r, :DATE, :INT; kind = :line) |> println
+        visualize(r, :DATE, :W; kind = :line) |> println
+        visualize(r, :DATE, :Wc; kind = :line) |> println
+        visualize(r, :DATE, :Wr; kind = :line) |> println
+        visualize(r, :DATE, :Wf; kind = :line) |> println
+        visualize(r, :DATE, :LAI; kind = :line) |> println
     end
 
     @testset "soil water" begin
-        visualize(r, :DATE, :ROF; kind = :line) |> display
-        visualize(r, :DATE, :INF; kind = :line) |> display
-        visualize(r, :DATE, :DRN; kind = :line) |> display
-        visualize(r, :DATE, :ETp; kind = :line) |> display
-        visualize(r, :DATE, :ESa; kind = :line) |> display
-        visualize(r, :DATE, :EPa; kind = :line) |> display
-        visualize(r, :DATE, :SWC; kind = :line) |> display
-        visualize(r, :DATE, :(SWC/DP); yunit = u"mm^3/mm^3", kind = :line) |> display
-        visualize(r, :DATE, :SWFAC1; kind = :line) |> display
-        visualize(r, :DATE, :SWFAC2; kind = :line) |> display
+        visualize(r, :DATE, :ROF; kind = :line) |> println
+        visualize(r, :DATE, :INF; kind = :line) |> println
+        visualize(r, :DATE, :DRN; kind = :line) |> println
+        visualize(r, :DATE, :ETp; kind = :line) |> println
+        visualize(r, :DATE, :ESa; kind = :line) |> println
+        visualize(r, :DATE, :EPa; kind = :line) |> println
+        visualize(r, :DATE, :SWC; kind = :line) |> println
+        visualize(r, :DATE, :(SWC/DP); yunit = u"mm^3/mm^3", kind = :line) |> println
+        visualize(r, :DATE, :SWFAC1; kind = :line) |> println
+        visualize(r, :DATE, :SWFAC2; kind = :line) |> println
     end
 
     @testset "water balance" begin
