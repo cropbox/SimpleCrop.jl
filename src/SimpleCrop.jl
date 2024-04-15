@@ -10,4 +10,6 @@ include("weather.jl")
 
 export Model
 
+include("precompile.jl")
+
 end
