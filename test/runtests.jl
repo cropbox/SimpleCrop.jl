@@ -25,7 +25,10 @@ r = simulate(SimpleCrop.Model;
 )
 
 @testset "simplecrop" begin
+    @test r.endsim[end]
     @testset "plant" begin
+        @test r.W[end] ≈ 1186.322522u"g/m^2" rtol=1e-6
+        @test all(isfinite, r.W)
         visualize(r, :DATE, :N; kind = :line) |> println
         visualize(r, :DATE, :INT; kind = :line) |> println
         visualize(r, :DATE, :W; kind = :line) |> println
@@ -49,6 +52,7 @@ r = simulate(SimpleCrop.Model;
     end
 
     @testset "water balance" begin
+        @test maximum(abs, r.WATBAL) < 1e-8u"mm"
         println("Initial soil water content: ", r[end, :SWC0])
         println("Final soil water content: ", r[end, :SWC])
         println("Total rainfall depth: ", r[end, :TRAIN])
