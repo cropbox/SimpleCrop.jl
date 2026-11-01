@@ -24,7 +24,7 @@ PrecompileTools.@compile_workload begin
         verbose = false,
     )
 
-    for backend in (:UnicodePlots, :Gadfly)
+    for backend in (:UnicodePlots, isdefined(Cropbox, :Makie) ? :Makie : :Gadfly)
         visualize(r, :DATE, :LAI; kind = :line, backend)
     end
 end
